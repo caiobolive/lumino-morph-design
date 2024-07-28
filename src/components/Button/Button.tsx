@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
+import createElement from 'react-to-webcomponent';
 import styles from './Button.module.scss';
 
 interface ButtonProps {
@@ -8,10 +10,12 @@ interface ButtonProps {
 
 const LmButton: React.FC<ButtonProps> = ({ label, onClick }) => {
   return (
-    <button className={styles.button} onClick={onClick}>
+    <button className={styles['lm-button']} onClick={onClick}>
       {label}
     </button>
   );
 };
+
+customElements.define('lm-button', createElement(LmButton, React, ReactDOM));
 
 export default LmButton;

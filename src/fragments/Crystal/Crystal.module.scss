@@ -1,0 +1,40 @@
+#page {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    background-color: #0e1111;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  #canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  #crystal {
+    margin: 2em auto 0;
+    height: 10vh;
+    width: 10vw;
+    z-index: 2;
+    position: relative;
+    min-height: 250px;
+    min-width: 250px;
+  }
+  
+  .crystal {
+    height: 18em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.crystal:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.crystal.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}

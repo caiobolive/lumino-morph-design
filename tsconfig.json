@@ -12,7 +12,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "allowImportingTsExtensions": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "baseUrl": "./src",
+    "paths": {
+      "assets/*": ["assets/*"]
+    }
   },
   "include": ["src"]
 }
